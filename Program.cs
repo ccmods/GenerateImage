@@ -7,12 +7,13 @@ using Services;
 using Entity;
 using Microsoft.Extensions.Logging;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace GenerateScreen
 {
     class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             // Create service collection
             var serviceCollection = new ServiceCollection();
@@ -22,7 +23,7 @@ namespace GenerateScreen
             var serviceProvider = serviceCollection.BuildServiceProvider();
             CancellationToken ct = CancellationToken.None;
             // Run app
-            serviceProvider.GetService<GenerateImageService>().StartAsync(ct);
+            await serviceProvider.GetService<GenerateImageService>().StartAsync(ct);
         }
 
         private static void ConfigureServices(IServiceCollection serviceCollection)
