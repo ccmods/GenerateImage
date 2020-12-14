@@ -1,0 +1,12 @@
+----------
+2020-12-13 21:30:26.639 -05:00
+Message:Starting
+Priority:Information
+Details:
+-----
+-----
+2020-12-13 21:30:28.185 -05:00
+Message:Background work with text: redactedconfigvalue
+Priority:Information
+Details:
+-----
